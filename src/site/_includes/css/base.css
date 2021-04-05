@@ -1,0 +1,453 @@
+/* -----------------------------------------------------
+ * Base styles
+ * ----------------------------------------------------- */
+ :root {
+  /* non-theme css-variables */
+
+  /* ShiftStoned colors */
+  --Cinder: #17141D;
+  --MineShaft: #2E2E2E;
+  --Eggplant: #533D4F;
+  --Charade: #2E2C3D;
+  --Martinique: #322C4B;
+  --Malachite: #458A9E;
+  --Malibu: #81C3F4;
+
+  /* Faction colors */
+  --FireRed: #A30C0E;
+  --TimeYellow: #B26F03;
+  --JusticeGreen: #3A6727;
+  --PrimalBlue: #033276;
+  --ShadowPurple: #331745;
+  --MultiBlack: #111111;
+  --NeutralGray: #2D2B2E;
+
+  /* Rarity colors */
+  --CommonGray: #333333;
+  --UncommonGreen: #236B08;
+  --RareBlue: #4F86BE;
+  --LegendaryOrange: #FF9521;
+  --PromoPurple: #7A17C0;
+
+  /* Misc */
+  --header-height: 104px;
+}
+
+* {
+  background-repeat: no-repeat;
+}
+
+/* hide from view, but leave enabled for screen reader accessability
+ * (see https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) */
+ .visually-hidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+/* allow the element to be focusable when navigated to via the keyboard */
+.hidden-focusable:active,
+.hidden-focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	white-space: normal;
+	width: auto;
+}
+
+/* Style HTML5 semantic elements for older, unsupported browsers */
+article, aside, footer, header, nav, section {
+  display:block;
+}
+
+/* Style "Javascript disabled" notification/warning */
+.js-notification {
+  padding: 1rem 2rem;
+  border: 2px solid red;
+  margin: 1rem;
+}
+
+/* ================================== */
+
+/*
+    Fonts
+*/
+
+@font-face {
+    font-family: 'Open Sans Condensed Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url(open-sans-condensed-bold.woff2) format('woff2'),
+            url(open-sans-condensed-bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: url(open-sans-extra-bold.woff2) format('woff2'),
+            url(open-sans-extra-bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(open-sans-regular.woff2) format('woff2'),
+            url(open-sans-regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: url(merriweather-regular.woff2) format('woff2'),
+            url(merriweather-regular.woff) format('woff');
+}
+
+/* Horizontal Rules */
+
+hr {
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;
+  border: 1px solid #333333;
+}
+
+img.articleThumbnail {
+  float: left;
+  /* width: 250px; */
+  /* margin-left: 155px; */
+  margin-right: 15px;
+  object-fit: contain;
+  width: 100%;
+}
+
+img.articleMargin {
+  width: 250px;
+  float: left;
+  margin: 60px 30px 30px 30px;
+}
+
+/* Background image for pages */
+.background {
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+    /* top: 0px;
+    left: 0px;
+    margin: 0px auto; */
+}
+
+/* Container for base page content */
+.bodyGrid {
+    margin-left: 40px;
+    background-color: #17141D;
+    border: 0px solid;
+    border-bottom: none;
+    width: 1250px;
+    min-height: 1350px;
+}
+
+/* Background color and frame for base page layout grid */
+.newBodyGrid {
+    margin: auto;
+    background-color: #17141D;
+    border: 0px solid;
+    border-bottom: none;
+    width: 1140px;
+    min-height: calc(100vh - var(--header-height));
+}
+
+.articleListing {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  /* margin-left: 325px; */
+}
+
+h1.articleListingTitle {
+  margin-top: 0px;
+  font-size: 30px;
+}
+
+h2.topDeckTitle {
+  font: 22px Open Sans;
+}
+
+.topDeckProfile {
+  margin-top: 15px;
+  min-height: 250px;
+}
+
+h3.placement {
+  font: 12px Open Sans;
+}
+
+h3.placement.first {
+  color: #FFDF00;
+}
+
+h3.placement.second {
+  color: #C0C0C0;
+}
+
+h3.placement.third {
+  color:#cd7f32;
+}
+
+h3.placement.fifth {
+  color:#FF4500;
+}
+
+p.articleListing {
+  font: 15px Merriweather,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.6;
+  /* width: 800px; */
+}
+
+p.articleListing.featured {
+  font: 18px Merriweather,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.6;
+  /* width: 800px; */
+}
+
+/* header {
+  margin-top: 30px;
+} */
+
+.fullColumn {
+  width: 100%;
+}
+
+.halfColumn {
+  width: 50%;
+}
+
+.halfColumn.homeArticle {
+  float: left;
+  object-fit: contain;
+  padding: 10px;
+  border-right: 1px solid var(--MineShaft)
+}
+
+/* Older style - can be deleted after the rest of the article listings are formatted */
+.global_header_home {
+  display: block;
+  color: #ffffff;
+  border: 0px solid;
+  margin-left: 325px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-right: 250px;
+  font: 30px Open Sans Condensed Bold,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.2;
+}
+
+/* Older style - can be deleted after the rest of the article listings are formatted */
+.global_body {
+  display: block;
+  border: 10x solid;
+  margin-left: 325px;
+  width: 600px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: #ffffff;
+  font: 15px Merriweather,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.6;
+}
+
+hr.cbody {
+  margin-top: -6.5px;
+  margin-bottom: 0px;
+  height: 1.5px;
+  border: none;
+  color: #458A9E;
+  background-color: #458A9E;
+  width: 95%;
+}
+
+.newAbout-heading {
+    position: absolute;
+    top: 12px;
+    left: 990px;
+
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+#newNavigation-separator {
+    position: absolute;
+    top: 10px;
+    left: 1060px;
+    width: 2px;
+    height: 44px;
+    background-color: #FFFFFF;
+}
+
+/*
+
+  Goofy text formatting for ARTICLES - needs to be reworked
+
+*/
+
+.galleryDeck {
+  position: absolute;
+  left: 220px;
+  float: left;
+  width: 125px;
+}
+
+.textcol {
+  display: block;
+  color: #ffffff;
+  width: 600px;
+  margin: 50px auto 0px 320px;
+  font: 15px Merriweather,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.6;
+}
+
+/* Formerly <att> */
+.title {
+  display: block;
+  color: #ffffff;
+  margin: 50px auto;
+  margin-bottom: 7px;
+  margin-top: 0px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 40px;
+}
+
+/* Formerly <ats> */
+.subtitle {
+  display: block;
+  color: #81C3F4;
+  margin: 0px auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font: 20px Montserrat,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+}
+
+/* Formerly <atsub> */
+.tagline {
+  display: block;
+  color: #ffffff;
+  margin: 50px auto;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  font: 18px Open Sans,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.4;
+}
+
+/* Formerly <ath> */
+.subheading {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font: 30px 'Open Sans Condensed', sans-serif,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  font-weight: 700;
+}
+
+.subheading.first {
+  margin-top: 15px;
+}
+
+.atsub {
+  display: block;
+  color: #ffffff;
+  margin: 50px auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font: 18px Open Sans,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+  line-height: 1.4;
+}
+
+/*
+
+  Homepage features
+
+*/
+
+/* Create three equal columns that float next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+
+.row {
+  margin-top: 18px;
+}
+
+.row:after {
+  margin-top: 89px;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create three equal columns that floats next to each other */
+.homepageFeature {
+  float: left;
+  width: 33.33%;
+  padding: 0px;
+  border: solid 0px red;
+  font-size: 1.2em;
+  font-family: 'Open Sans',sans-serif;
+  font-weight: 600;
+}
+
+.homepageFeature.center {
+  text-align: center;
+}
+
+.homepageFeature.right {
+  text-align: right;
+}
+
+.homepageFeature img {
+  width: 339px;
+  height: 140px;
+  object-fit: cover;
+  border: solid 1px white;
+}
+
+.homepageFeatureLabel {
+  width: 330px;
+  text-align: center;
+  margin-bottom: 6px;
+  border: 0px orange solid;
+}
+
+.homepageFeatureLabel.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homepageFeatureLabel.right {
+  float: right;
+}
+
+.tutorialTip {
+  background-color: var(--Charade);
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  font-family: 'Merriweather',serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  border: solid 1px var(--Malachite);
+  text-align: center;
+}

@@ -1,0 +1,9 @@
+{
+    "layout" : "layouts/html.njk",
+    "section":"Articles",
+    "page_class" : "article",
+    "page_style" : "mdArticles.css",
+    "tags" : "articles",
+    "bg_img": "/images/BackgroundArticles.jpg",
+    "permalink" : "/articles/{{ page.fileSlug }}/"
+}

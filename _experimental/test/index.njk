@@ -1,0 +1,47 @@
+---
+title: Test
+layout: layouts/html.njk
+page_style: test.css
+date: 2020-05-30
+---
+<h2>Hover-tooltip test</h2>
+
+<p>
+{% hover_text %}
+Hover over me!
+{% hover_content %}
+Tooltip text...
+{% endhover_content %}
+{% endhover_text %}
+</p>
+
+<h2>Date shortcode test</h2>
+<p>
+  Attempting to parse: <code>{{ page.date }}</code>.
+</p>
+<p>
+  Result: {% date page.date %} at {% time page.date %}
+</p>
+
+<h2>Title from site.json </h2>
+
+Title:
+{%- if title or (renderData and renderData.title) -%}
+  {{- title or (renderData and renderData.title)  | safe }} | {% endif -%}
+{{- site.metaTitle -}}
+
+<br>
+bangarang: {{- custom.bangarang -}}
+
+<br>
+localbangarang: {{- test.localbangarang -}}
+
+<br>
+Site.social.twitter: {{ site.social.twitter }}
+
+<br>
+Site.social.discord: {{ site.social.discord }}
+
+<br>
+url-real: {{- site.url-real -}}
+<a href="{{ site.url-real }}">url-real</a>

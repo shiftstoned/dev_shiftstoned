@@ -1,0 +1,243 @@
+/*
+  Unique styles for the Drafter tool
+*/
+
+.drafterControlPanel {
+  float: left;
+  height: 70px;
+  width: 68%;
+  background-color: #2E2C3D;
+}
+
+.drafterControlLabel {
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+.drafterSearch {
+  height: 30px;
+  border-radius: 7px;
+  border: 0px;
+  font-family: 'Open Sans', sans-serif; padding: 2px;
+}
+
+.drafterPack select {
+   background-color: #FFFFFF;
+   width: 268px;
+   height: 30px;
+   padding: 0px;
+   line-height: 1;
+   border: 0px solid #458A9E;
+   border-radius: 7px;
+   outline: none;
+   opacity: 1; /* Firefox */
+   font-family: 'Open Sans', sans-serif;
+ }
+
+.evaluatorImg {
+   width: 100px;
+   float: right;
+}
+
+/* Formatting for Drafter card collection in the left panel */
+
+.drafterCardCollection {
+  width: 68%;
+  float: left;
+}
+
+/* Container for individual card in Drafter */
+.cardBlock {
+  position: relative;
+  float: left;
+  margin: 15px;
+}
+
+.cardBlock img {
+    width: 160px;
+}
+
+/* Formatting for Drafter card block circular grade label */
+.gradeCircle {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  padding: 12px;
+  font-family: 'Merriweather', serif;
+  color: white;
+  text-align: center;
+  background-color: orange;
+  border: solid 3px #e6e6e6;
+  top: 10px;
+  left: 110px;
+  opacity: .9;
+  border-radius: 50%;
+}
+
+.gradeCircle.A {
+  background-color: #009666;
+}
+
+.gradeCircle.B {
+  background-color: #6E9619;
+}
+
+.gradeCircle.C {
+  background-color: #D8A020;
+}
+
+.gradeCircle.D {
+  background-color: #C87517;
+}
+
+.gradeCircle.F {
+  background-color: #971818;
+}
+
+/* WC schools tooltip - can probably be replaced */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: #2E2C3D;
+  color: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  border: solid 1px #458A9E;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Decklist column for layout */
+
+.drafterDeckPanel {
+  width: 32%;
+  float: right;
+  /* margin-top: 12px;
+  margin-left: 10px; */
+}
+
+/* Tab buttons for Deck and Pool */
+
+.button {
+  color: #FFFFFF;
+  background-color: #333333;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  border-radius: 7px;
+  margin: 0px 0px 0px 0px;
+}
+
+.button4 {
+  padding: 5px;
+  border-top: 1px solid #458A9E;
+  border-right: 1px solid #458A9E;
+  border-left: 1px solid #458A9E;
+  border-bottom: 1px solid var(--Martinique);
+  background-color: #322C4B;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 100px;
+  height: 30px;
+  font-style: normal;
+}
+
+.button5 {
+  /* margin-left: 10px; */
+  padding: 5px;
+  border-top: 1px solid #458A9E;
+  border-right: 1px solid #458A9E;
+  border-left: 1px solid #458A9E;
+  border-bottom: 1px solid #458A9E;
+  background-color: #11222A;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  color: #458A9E;
+  width: 100px;
+  height: 30px;
+  font-style: normal;
+}
+
+.sequenceCircle {
+  display: inline-block;
+  font-family: 'Open Sans Condensed';
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--Eggplant);
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.sequenceCircle.selected {
+  color: black;
+  background-color: var(--Links);
+  border: 1px solid white;
+}
+
+/* Column that holds the decklist - might appear in other layouts */
+
+.deckBox {
+  background-color: var(--Charade);
+  padding: 0px; /* Add padding to decklist */
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 97%;
+  min-height: 800px;
+  margin-top: 0px;
+  border-left: 1px solid #458A9E;
+  border-top: 1px solid #458A9E;
+  border-right: 1px solid #458A9E;
+  border-top-right-radius: 7px;
+}
+
+.deckBoxButton {
+  font-size: 12px;
+  float: right;
+  font-family: 'Open Sans Condensed',
+  sans-serif;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 2px;
+  width: 50px;
+  text-align: center;
+}

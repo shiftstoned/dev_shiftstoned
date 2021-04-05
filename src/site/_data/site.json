@@ -1,0 +1,20 @@
+{
+  "metaTitle": "ShiftStoned",
+  "url": "http://localhost:8080/",
+  "url-real": "https://www.shiftstoned.com/",
+  "twitter": "@shiftstoned", 
+  "author": {
+    "name": "Site-Author",
+    "email": "Site@Author-Email",
+    "twitter": "@Site-Author"
+  },
+  "social": {
+    "facebook": "",
+    "twitter": "@shiftstoned",
+    "twitch": "",
+    "youtube": "",
+    "reddit": "",
+    "discord": "https://discord.gg/ZXhVAVm"
+  },
+  "description": "Fan-built player resources for Eternal Card Game."
+}
